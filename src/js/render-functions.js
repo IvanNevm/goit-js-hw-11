@@ -11,10 +11,10 @@ export function createGallery(images) {
       <a href="${largeImageURL}" class="gallery-item">
         <img src="${webformatURL}" alt="${tags}" loading="lazy" />
         <div class="info">
-          <p>👍 Likes: ${likes}</p>
-          <p>👁️ Views: ${views}</p>
-          <p>💬 Comments: ${comments}</p>
-          <p>⬇️ Downloads: ${downloads}</p>
+          <p> Likes: <span class="info-value">${likes}</span></p>
+          <p> Views: <span class="info-value">${views}</span></p>
+          <p> Comments: <span class="info-value">${comments}</span></p>
+          <p> Downloads: <span class="info-value">${downloads}</span></p>
         </div>
       </a>
     `
@@ -23,6 +23,7 @@ export function createGallery(images) {
   galleryContainer.innerHTML = markup;
   lightbox.refresh();
 }
+
 
 export function clearGallery() {
   galleryContainer.innerHTML = '';
