@@ -140,11 +140,14 @@ body {
   margin-right: auto;
 }
 
-.loader {
+.info-value {
   display: block;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: #2e2f42;
+}
+.btn:hover {
+   background-color: #6c8cff;
 }
