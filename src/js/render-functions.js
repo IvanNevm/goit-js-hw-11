@@ -36,12 +36,3 @@ export function showLoader() {
 export function hideLoader() {
   document.querySelector('.loader').classList.remove('visible');
 }
-function showLoadingMessage() {
-  const loadingMessage = document.querySelector('.loader');
-  loadingMessage.style.display = 'block';
-}
-
-function hideLoadingMessage() {
-  const loadingMessage = document.querySelector('.loader');
-  loadingMessage.style.display = 'none';
-}

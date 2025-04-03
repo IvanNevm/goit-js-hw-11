@@ -10,15 +10,6 @@ import 'izitoast/dist/css/iziToast.min.css';
 
 const form = document.querySelector('.form');
 const searchInput = document.querySelector('input[name="search-text"]');
-const loadingMessage = document.querySelector('.loading-message'); // Елемент для повідомлення
-
-function showLoadingMessage() {
-  loadingMessage.style.display = 'block'; // Показати повідомлення
-}
-
-function hideLoadingMessage() {
-  loadingMessage.style.display = 'none'; // Приховати повідомлення
-}
 
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
@@ -33,8 +24,7 @@ form.addEventListener('submit', async (event) => {
   }
 
   clearGallery();
-  showLoader();
-  showLoadingMessage(); // Показати "Loading, please wait"
+  showLoader(); // Показуємо завантажувач
 
   try {
     const data = await getImagesByQuery(query);
@@ -52,7 +42,6 @@ form.addEventListener('submit', async (event) => {
       message: 'Something went wrong. Please try again later!',
     });
   } finally {
-    hideLoader();
-    hideLoadingMessage(); // Приховати "Loading, please wait"
+    hideLoader(); // Приховуємо завантажувач
   }
 });
