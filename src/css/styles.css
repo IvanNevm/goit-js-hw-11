@@ -70,7 +70,9 @@
       margin-right: auto;
       text-align: center;
 }
-
+.loader.visible {
+  display: block;
+}
 * {
   box-sizing: border-box;
 }
